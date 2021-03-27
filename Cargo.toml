@@ -1,0 +1,30 @@
+[package]
+name = "sd2405al"
+version = "0.1.0"
+authors = ["Paul Diaconescu <paul.diaconescu@svt.se>"]
+license = "MIT OR Apache-2.0"
+edition = "2018"
+description = "Driver for the SDA2405AL real-time clock, for use with embedded-hal"
+
+keywords = ["embedded-hal-driver", "rtc", "clock", "driver"]
+categories = ["no-std", "embedded"]
+
+documentation = "https://docs.rs/sd2405al"
+repository = "https://github.com/afajl/sd2405al"
+
+readme = "README.md"
+
+[dependencies]
+embedded-hal = "0.2.4"
+rtcc = "0.2"
+
+
+[dev-dependencies]
+embedded-hal-mock = "0.7"
+
+# For running example on Raspberry PI
+[target.'cfg(target_os = "linux")'.dependencies]
+linux-embedded-hal = "0.3.0"
+
+[profile.release]
+lto = true

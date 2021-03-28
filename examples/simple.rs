@@ -13,7 +13,7 @@ use linux_embedded_hal::{Delay, I2cdev};
 use embedded_hal::blocking::delay::DelayMs;
 
 #[cfg(target_os = "linux")]
-use sd2405al::{Datelike, NaiveDate, NaiveDateTime, NaiveTime, Rtcc, Sd2405al, Timelike};
+use sd2405al::prelude::*;
 
 #[cfg(target_os = "linux")]
 fn main() {
